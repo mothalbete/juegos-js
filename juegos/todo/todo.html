@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <h1>📝 Mi To-Do List</h1>
+
+  <div class="todo-container">
+    <input type="text" id="nueva-tarea" placeholder="Escribe una tarea...">
+    <input type="time" id="hora-tarea" title="Hora de la tarea">
+    <button id="agregar">Agregar</button>
+
+    <div class="filtro">
+      <label for="filtro-fecha">Filtrar por fecha:</label>
+      <select id="filtro-fecha">
+        <option value="todas">Todas las fechas</option>
+      </select>
+    </div>
+
+    <ul id="lista-tareas"></ul>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+</html>
