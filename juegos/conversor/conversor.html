@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor de Unidades</title>
+  <link rel="stylesheet" href="conversor.css" />
+</head>
+<body>
+  <h1>Conversor de Unidades</h1>
+
+  <div class="conversor">
+    <label for="tipo">Tipo de conversión:</label>
+    <select id="tipo">
+      <option value="distancia">Distancia</option>
+      <option value="moneda">Moneda</option>
+    </select>
+
+    <label for="origen">Unidad origen:</label>
+    <select id="origen"></select>
+
+    <button id="intercambiar">⇄ Intercambiar</button>
+
+    <label for="destino">Unidad destino:</label>
+    <select id="destino"></select>
+
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" placeholder="Introduce un valor" />
+
+    <button onclick="convertir()">Convertir</button>
+    <button onclick="history.back()">Volver</button>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="conversor.js"></script>
+</body>
+</html>
+

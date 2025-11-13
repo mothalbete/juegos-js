@@ -1,0 +1,120 @@
+/* Estilo general */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fff0f5;
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://gifdb.com/images/high/animated-stars-loading-icon-38ccjfav8iijnqrb.gif') repeat;
+  animation: moverFondo 60s linear infinite;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+@keyframes moverFondo {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+
+h1 {
+  font-size: 28px;
+  color: #ff1493;
+  text-shadow: 1.5px 1.5px #ff69b4;
+  margin-bottom: 30px;
+}
+
+/* Contenedor principal de los 8 juegos */
+body > div:first-of-type {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  justify-items: center;
+}
+
+/* Último bloque centrado debajo */
+.contenedor-juegos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Estilo para cada enlace de juego */
+a {
+  background-color: #ffffe0;
+  border: 3px solid #ff69b4;
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 #000;
+  width: 240px;
+  padding: 16px;
+  text-decoration: none;
+  color: #000;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+a:hover {
+  transform: scale(1.04);
+}
+
+a h1 {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #ff4500;
+}
+
+a img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 8px 0;
+  border: 2px solid #ffa500;
+  display: block;
+}
+
+a p {
+  font-size: 14px;
+  color: #333;
+  margin: 8px 0;
+}
+
+
+
+/* 📱 Responsive: móviles y tablets */
+@media (max-width: 768px) {
+  body > div:first-of-type {
+    grid-template-columns: 1fr;
+  }
+
+  .contenedor-juegos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  a h1 {
+    font-size: 16px;
+  }
+
+  a img {
+    height: 140px;
+  }
+}

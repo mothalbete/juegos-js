@@ -1,0 +1,177 @@
+body {
+  font-family: 'Cinzel', serif;
+  background: #fdf6e3;
+  color: #3b2f2f;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: #6b4226;
+}
+
+#armas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.arma {
+  background: #fff8dc;
+  border: 2px solid #8b5e3c;
+  border-radius: 10px;
+  width: 200px;
+  padding: 14px;
+  font-size: 0.85rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.arma:hover {
+  transform: scale(1.02);
+}
+
+.arma img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 4px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.btnArma {
+  background-color: #8b5e3c;
+  color: #fff8dc;
+}
+
+.btnInfo {
+  background-color: #d4af37;
+  color: #3b2f2f;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: 0;
+}
+
+.info-text {
+  display: none;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.mostrar .info-text {
+  display: block;
+}
+
+.recuadro-maquina {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 16px;
+  border: 3px solid #8b5e3c;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff8dc;
+  font-size: 2.4rem;
+  box-shadow: 0 0 8px #8b5e3c;
+}
+
+.resultado-ruleta,
+.resultado-final {
+  margin-top: 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.volver {
+  background-color: #6b4226;
+  color: #fff8dc;
+  margin-top: 30px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+}
+
+.reiniciar {
+  background-color: #27ae60;
+  color: #fff;
+  padding: 8px 16px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Cinzel', serif;
+}
+
+.reiniciar:hover {
+  background-color: #2ecc71;
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .arma h2 {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    word-break: break-word;
+    text-align: center;
+  }
+
+  #armas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .arma {
+    flex: 1 1 calc(33.333% - 10px);
+    min-width: 100px;
+    max-width: 33.333%;
+    box-sizing: border-box;
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .arma img {
+    width: 100%;
+    height: auto;
+  }
+
+  .btnArma,
+  .btnInfo {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+
+  .info-text {
+    font-size: 0.75rem;
+  }
+
+  .recuadro-maquina,
+  .resultado-ruleta,
+  .resultado-final,
+  .volver,
+  .reiniciar {
+    margin-top: 16px;
+    width: 100%;
+  }
+}

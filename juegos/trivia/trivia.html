@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Trivial de 5 Preguntas</title>
+  <link rel="stylesheet" href="trivia.css">
+</head>
+<body>
+  <h1>Trivial de 5 Preguntas</h1>
+    <div id="pantalla-inicial">
+    <h2>Pon a prueba tus conocimientos</h2>
+    <button id="comenzar">Comenzar</button>
+    </div>
+    <div id="pantalla-error" style="display: none; text-align: center;">
+    <h2>Una pena, has fallado</h2>
+    <p>¿Quieres intentarlo de nuevo?</p>
+    <button id="intentar-nuevo">Intentar de nuevo</button>
+    </div>
+
+
+  <form id="trivial-form">
+    
+    <!-- Pregunta 1 -->
+    <fieldset>
+      <legend>¿Qué pasa cuando un Pokémon tipo Veneno usa el movimiento Tóxico?</legend>
+      <label><input type="radio" name="pregunta1" value="a"> El veneno actúa más rápido</label><br>
+      <label class="verdad"><input type="radio" name="pregunta1" value="b"> El movimiento nunca fallará</label><br>
+      <label><input type="radio" name="pregunta1" value="c"> El movimiento tardará más en efectuarse, pero su potencia será mayor</label>
+      <p class="resultado"></p>
+    </fieldset>
+
+    <!-- Pregunta 2 -->
+    <fieldset>
+      <legend>¿Qué secreto guardan la mayoría de personajes polilla de Hollow Knight?</legend>
+      <label class="verdad"><input type="radio" name="pregunta2" value="a"> Las antenas demuestran que pertenecen al colectivo trans</label><br>
+      <label><input type="radio" name="pregunta2" value="b"> Su amor por el personaje de Radiance condenó al reino de Hallownest</label><br>
+      <label><input type="radio" name="pregunta2" value="c"> Tienen un poblado secreto donde aún residen muchas de esta tribu</label>
+      <p class="resultado"></p>
+    </fieldset>
+
+    <!-- Pregunta 3 -->
+    <fieldset>
+      <legend>En Inscryption ¿qué es necesario para que el Huevo Curioso eclosione?</legend>
+      <label class="verdad"><input type="radio" name="pregunta3" value="a"> Necesitas una carta de cada especie y completar una escalera de vida y otra de ataque del 1-5</label><br>
+      <label><input type="radio" name="pregunta3" value="b"> Debes obtener la carta del Cuco para que incube el huevo</label><br>
+      <label><input type="radio" name="pregunta3" value="c"> Tienes que dejar que un Cuco rival se debilite al huevo</label>
+      <p class="resultado"></p>
+    </fieldset>
+
+    <!-- Pregunta 4 -->
+    <fieldset>
+      <legend>¿Qué juego da origen a los sucesos de NieR: Automata?</legend>
+      <label><input type="radio" name="pregunta4" value="a"> NieR: Replicant</label><br>
+      <label><input type="radio" name="pregunta4" value="b"> ICO</label><br>
+      <label class="verdad"><input type="radio" name="pregunta4" value="c"> Drakengard</label>
+      <p class="resultado"></p>
+    </fieldset>
+
+    <!-- Pregunta 5 -->
+    <fieldset>
+      <legend>¿Cuál es el nombre de la infección que se extiende por todo Penglai y da origen a los acontecimientos de Nine Sols?</legend>
+      <label><input type="radio" name="pregunta5" value="a"> Tianhue</label><br>
+      <label class="verdad"><input type="radio" name="pregunta5" value="b"> Tianhuo</label><br>
+      <label><input type="radio" name="pregunta5" value="c"> Tienhuao</label>
+      <p class="resultado"></p>
+    </fieldset>
+    <button type="button" id="reiniciar">Reiniciar juego</button>
+    <a href="http://192.168.100.135/juegos/">Volver</a>
+</form>
+
+  <script src="trivia.js"></script>
+</body>
+</html>

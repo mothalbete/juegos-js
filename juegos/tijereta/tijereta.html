@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Piedra, Papel o Tijera</title>
+  <link rel="stylesheet" href="tijereta.css" />
+</head>
+<body>
+  <h1>Escoge tu arma</h1>
+  <div id="armas">
+    <div class="arma" data-arma="piedra">
+      <h2>Adoquín mortuorio</h2>
+      <img src="img/piedra.jpg" alt="Piedra" />
+      <p>Durante la guerra estas piezas formaron parte de las tumbas de los difuntos.</p>
+      <button class="btnArma">Escoger arma</button>
+      <button class="btnInfo">i</button>
+      <p class="info-text">Debilidad:📋</p>
+      <p class="info-text">Resistencia:✂️</p>
+      <p class="info-text">Neutro:🥌</p>
+    </div>
+
+    <div class="arma" data-arma="papel">
+      <h2>Tratado de paz</h2>
+      <img src="img/papel.jpg" alt="Papel" />
+      <p>Pergamino ajado que jamás llegó a firmarse.</p>
+      <button class="btnArma">Escoger arma</button>
+      <button class="btnInfo">i</button>
+      <p class="info-text">Debilidad:✂️</p>
+      <p class="info-text">Resistencia:🥌</p>
+      <p class="info-text">Neutro:📋</p>
+    </div>
+
+    <div class="arma" data-arma="tijera">
+      <h2>Tijera de Moira</h2>
+      <img src="img/tijera.jpg" alt="Tijera" />
+      <p>Se dice que estas tijeras pueden cortar los hilos del destino.</p>
+      <button class="btnArma">Escoger arma</button>
+      <button class="btnInfo">i</button>
+      <p class="info-text">Debilidad:🥌</p>
+      <p class="info-text">Resistencia:📋</p>
+      <p class="info-text">Neutro:✂️</p>
+    </div>
+  </div>
+
+<div class="recuadro-maquina">
+  <div id="emojiMaquina" class="emoji-rotando">🥌</div>
+</div>
+
+
+  <div id="resultadoMaquina" class="resultado-ruleta"></div>
+  <div id="resultadoFinal" class="resultado-final"></div>
+  <button class="volver" onclick="history.back()">Volver</button>
+  <button id="btnReiniciar" class="reiniciar">Reiniciar juego</button>
+
+  <script src="tijereta.js"></script>
+</body>
+</html>

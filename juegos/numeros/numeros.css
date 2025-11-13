@@ -1,0 +1,95 @@
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #1a1a1a;
+  color: #ff4c4c;
+  margin: 0;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fondoParpadeo 2s infinite alternate;
+}
+
+@keyframes fondoParpadeo {
+  0% { background-color: #1a1a1a; }
+  100% { background-color: #300000; }
+}
+
+h1 {
+  font-size: 28px;
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000;
+  margin-bottom: 30px;
+  animation: parpadeoTexto 1s infinite;
+}
+
+@keyframes parpadeoTexto {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+input[type="number"] {
+  width: 220px;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #ff0000;
+  border-radius: 8px;
+  background-color: #000;
+  color: #ff4c4c;
+  box-shadow: 0 0 10px #ff0000;
+  outline: none;
+}
+
+input[type="number"]::placeholder {
+  color: #ff9999;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff0000;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #cc0000;
+}
+
+button:disabled {
+  background-color: #444;
+  color: #999;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.volver {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #222;
+  color: #ff4c4c;
+  border: 2px solid #ff0000;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 8px #ff0000;
+  transition: transform 0.2s ease;
+}
+
+.volver:hover {
+  transform: scale(1.05);
+  background-color: #400000;
+}
+
+
