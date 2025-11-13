@@ -79,7 +79,6 @@ function reiniciarJuego() {
   botonReiniciar.style.display = 'none';
 }
 
-// Evento para comenzar el juego
 botonComenzar.addEventListener('click', () => {
   pantallaInicial.style.display = 'none';
   pantallaError.style.display = 'none';
@@ -88,12 +87,10 @@ botonComenzar.addEventListener('click', () => {
   mostrarPregunta(preguntaActual);
 });
 
-// Evento para reiniciar manualmente
 botonReiniciar.addEventListener('click', () => {
   reiniciarJuego();
 });
 
-// Evento para intentar de nuevo desde pantalla de error
 botonIntentarNuevo.addEventListener('click', () => {
   reiniciarJuego();
   pantallaInicial.style.display = 'none';
@@ -101,7 +98,6 @@ botonIntentarNuevo.addEventListener('click', () => {
   mostrarPregunta(preguntaActual);
 });
 
-// Inicialización al cargar la página
 mezclarOpciones();
 configurarEventos();
 formulario.style.display = 'none';
