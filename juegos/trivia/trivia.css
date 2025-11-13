@@ -6,11 +6,12 @@ body {
   text-align: center;
   margin: 0;
   padding: 0 20px;
+  line-height: 1.6;
 }
 
 /* === TÍTULOS === */
 h1 {
-  font-size: 2.5em;
+  font-size: 2.8em;
   margin-top: 30px;
   color: #ffd700;
   text-shadow: 0 0 10px #ffd700, 0 0 20px #ff8c00;
@@ -28,6 +29,7 @@ h2 {
 #pantalla-error {
   margin-top: 80px;
   padding: 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 #pantalla-error p {
@@ -46,12 +48,13 @@ button {
   cursor: pointer;
   margin-top: 20px;
   box-shadow: 0 0 10px #00ffff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
 }
 
 button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px #00ffff;
+  background: linear-gradient(to bottom, #0055ff, #002266);
 }
 
 /* === FORMULARIO === */
@@ -71,12 +74,23 @@ fieldset {
   padding: 20px;
   margin-bottom: 30px;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease;
 }
 
 legend {
   font-size: 1.3em;
   color: #ffd700;
   margin-bottom: 10px;
+}
+
+/* === IMÁGENES === */
+fieldset img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #333;
+  object-fit: cover;
 }
 
 /* === OPCIONES === */
@@ -86,10 +100,22 @@ label {
   font-size: 1.05em;
   cursor: pointer;
   text-align: left;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+label:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 input[type="radio"] {
   margin-right: 10px;
+}
+
+/* === RESPUESTAS CORRECTAS === */
+label.verdad {
+  border-left: 4px solid #00ff00;
 }
 
 /* === RESULTADO === */
@@ -97,6 +123,7 @@ input[type="radio"] {
   font-weight: bold;
   margin-top: 15px;
   font-size: 1.2em;
+  color: #ffcc00;
 }
 
 /* === ENLACE VOLVER === */
@@ -109,12 +136,18 @@ a {
   border: 1px solid #00ffff;
   padding: 8px 16px;
   border-radius: 8px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 a:hover {
   background-color: #00ffff;
   color: #000;
+}
+
+/* === ANIMACIONES === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* === RESPONSIVE DESIGN === */
@@ -143,14 +176,9 @@ a:hover {
     font-size: 1em;
   }
 
-  button {
+  button, a {
     width: 100%;
     font-size: 1em;
-  }
-
-  a {
-    width: 100%;
     display: block;
-    font-size: 1em;
   }
 }
